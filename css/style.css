@@ -1,0 +1,19 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+
+/* VARIABLES */
+
+:root {
+    --principal: font-family: 'Roboto', sans-serif;
+}
+
+
+/* GLOBALES */
