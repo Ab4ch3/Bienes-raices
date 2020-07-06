@@ -1,6 +1,6 @@
 html {
     box-sizing: border-box;
-    font-size: var(--principal);
+    font-family: var(--principalfont);
 }
 
 *,
@@ -13,8 +13,8 @@ html {
 /* VARIABLES */
 
 :root {
-    --principal: font-family: 'Roboto', sans-serif;
-    --ColorPrincipal: background-color: rgb(23, 70, 170);
+    --principalfont: 'Roboto', sans-serif;
+    --ColorPrincipal: rgb(4, 20, 54);
 }
 
 
@@ -41,17 +41,34 @@ ul {
 .contenedor {
     max-width: 1100px;
     margin: 0 auto;
+    /* border: 2px solid black; */
 }
 
 img {
     max-width: 100%;
 }
 
+.boton {
+    height: 6rem;
+    width: 16rem;
+    align-self: center;
+    background-color: var(--ColorPrincipal);
+    border: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.boton:hover {
+    border: 2px solid var(--ColorPrincipal);
+    background-color: white;
+    color: black;
+}
+
 
 /*###### HEADER #####*/
 
 .header {
-    background-color: rgb(23, 70, 170);
+    background-color: var(--ColorPrincipal);
     margin-top: 2rem;
 }
 
@@ -77,15 +94,142 @@ img {
     padding: 2rem;
     font-size: 1.4rem;
     color: white;
-    /* border-left: 1px solid white; */
-    /* border-right: 1px solid white; */
 }
 
 .navegacion ul a:hover {
-    border-left: 1px solid white;
-    border-right: 1px solid white;
-    border-top-left-radius: 90px;
-    border-top-right-radius: 90px;
-    border-bottom-right-radius: 90px;
-    border-bottom-left-radius: 90px;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+
+/* #### SLIDE NOSOTROS #### */
+
+.slide {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    margin-top: 2rem;
+    /* grid-column-gap: 1rem; */
+}
+
+.slide .imagen {
+    display: flex;
+}
+
+.slide .casaN {
+    padding: 1rem;
+}
+
+.slide .nosotros {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+}
+
+.nosotros h1 {
+    font-size: 2.5rem;
+    text-align: left;
+    padding: 1rem;
+    margin: 1rem 1rem 1.5rem 0rem;
+}
+
+.nosotros p {
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+
+/* #### MAIN #### */
+
+.contenido-principal .subtitulo {
+    font-size: 2.3rem;
+    margin: 1rem;
+}
+
+.contenido-principal .ventas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1rem;
+}
+
+.destacada {
+    grid-column: 1 / 3;
+    grid-row: 1 /2;
+    display: flex;
+    border: 1px solid var(--ColorPrincipal);
+}
+
+.destacada .img-casa {
+    display: flex;
+}
+
+.destacada .img-dest {
+    width: 70rem;
+}
+
+.destacada .informacion-destacada {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.destacada .informacion-destacada h4 {
+    font-size: 2.5rem;
+    padding: 1rem;
+    /* margin-top: 1rem; */
+}
+
+.destacada .informacion-destacada p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: .5rem;
+}
+
+.destacada .informacion-destacada .precio {
+    font-size: 1.5rem;
+    padding: 2rem;
+}
+
+.precio span {
+    color: var(--ColorPrincipal);
+    font-weight: 300;
+}
+
+
+/*### Card Casa-venta ###*/
+
+.casa-venta {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--ColorPrincipal);
+    /* justify-content: space-between; */
+}
+
+.casa-venta .informacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem;
+    height: 100%;
+}
+
+.casa-venta .informacion p {
+    font-size: 1rem;
+    line-height: 1.8rem;
+}
+
+.informacion h4 {
+    font-size: 2rem;
+}
+
+.casa-venta .informacion .precio {
+    font-size: 1.5rem;
+}
+
+.informacion .precio span {
+    color: var(--ColorPrincipal);
+    font-weight: 300;
 }
