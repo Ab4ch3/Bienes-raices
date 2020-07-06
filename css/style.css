@@ -56,6 +56,7 @@ img {
     border: none;
     color: white;
     text-transform: uppercase;
+    transition: all .8s ease-in-out;
 }
 
 .boton:hover {
