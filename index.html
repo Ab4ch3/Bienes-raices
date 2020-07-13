@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous"> -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>Bienes Raices</title>
 </head>
@@ -19,14 +20,14 @@
             </div>
             <nav class="navegacion">
                 <ul>
-                    <li><a href="#">Nosotros</a></li>
-                    <li><a href="#">Casas</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#casas">Casas</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <div class="slide contenedor">
+    <div class="slide contenedor" id="nosotros">
         <div class="imagen">
             <img src="img/nosotros.jpg" alt="imagen de casa " class="casaN">
         </div>
@@ -36,7 +37,7 @@
                 rutrum in mi. Maecenas vitae nisl ultricies, ultricies elit ut, pellentesque sem. Etiam turpis mauris, sollicitudin nec nunc ut, consequat molestie sapien.</p>
         </div>
     </div>
-    <main class="contenido-principal contenedor">
+    <main class="contenido-principal contenedor" id="casas">
         <h2 class="subtitulo">Disponibles !</h2>
         <div class="ventas">
             <div class=" destacada">
@@ -99,53 +100,74 @@
         </div>
     </main>
     <footer class="footer">
-        <div class="tipos">
-            <h4>Tipos de Propiedades</h4>
-            <nav class="nav-tipos">
-                <ul>
-                    <li><a href="#">Apartamento</a></li>
-                    <li><a href="#">Casas</a></li>
-                    <li><a href="#">Local Comercial</a></li>
-                    <li><a href="#">Galpones</a></li>
-                    <li><a href="#">Terrenos</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="contacto">
-            <h4>Contacto</h4>
-            <p><i class="fas fa-phone-alt"></i>0212-578-2985</p>
-            <p><i class="fab fa-whatsapp"></i>0412-578-2985</p>
-            <p><i class="fas fa-envelope"></i>info@pgmbienesraices.com</p>
-            <p><i class="fas fa-map-marker-alt"></i>Urb San Bernardino, Av. Vollmer, Edif Vollmer. Caracas Venezuela</p>
-            <p><i class="far fa-clock"></i>Lun-Vie 8:00 am a 5:00 pm</p>
-        </div>
+        <div class="contenedor">
+            <div class="cont-footer">
+                <div class="tipos">
+                    <h4>Tipos de Propiedades</h4>
+                    <nav class="nav-tipos">
+                        <ul>
+                            <li><a href="#">Apartamento</a></li>
+                            <li><a href="#">Casas</a></li>
+                            <li><a href="#">Local Comercial</a></li>
+                            <li><a href="#">Galpones</a></li>
+                            <li><a href="#">Terrenos</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="contacto" id="contacto">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-phone-alt"></i>0212-578-2985</p>
+                    <p><i class="fab fa-whatsapp"></i>0412-578-2985</p>
+                    <p><i class="fas fa-envelope"></i>info@pgmbienesraices.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i>Urb San Bernardino, Av. Vollmer, Edif Vollmer. Caracas Venezuela
+                    </p>
+                    <p><i class="far fa-clock"></i>Lun-Vie 8:00 am a 5:00 pm</p>
+                </div>
 
-        <div class="opciones-casas">
-            <h3>Casa a La Venta</h3>
-            <div class="min-casas">
-                <div class="opt-casa">
-                    <img src="img/casa6.jpg" alt="" srcset="">
-                    <p>Casa #</p>
-                    <span>$2,000,000</span>
-                </div>
-                <div class="opt-casa">
-                    <img src="img/casa7.jpg" alt="" srcset="">
-                    <p>Casa #</p>
-                    <span>$2,000,000</span>
-                </div>
-                <div class="opt-casa">
-                    <img src="img/casa8.jpg" alt="" srcset="">
-                    <p>Casa #</p>
-                    <span>$2,000,000</span>
-                </div>
-                <div class="opt-casa">
-                    <img src="img/casa9.jpg" alt="" srcset="">
-                    <p>Casa #</p>
-                    <span>$2,000,000</span>
+                <div class="opciones-casas">
+                    <h3>Casas a La Venta</h3>
+                    <div class="min-casas">
+                        <a href="#">
+                            <div class="opt-casa">
+                                <img src="img/casa6.jpg" alt="" srcset="">
+                                <div class="info">
+                                    <p>Casa #</p>
+                                    <span>$2,000,000</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="opt-casa">
+                                <img src="img/casa7.jpg" alt="" srcset="">
+                                <div class="info">
+                                    <p>Casa #</p>
+                                    <span>$2,000,000</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="opt-casa">
+                                <img src="img/casa8.jpg" alt="" srcset="">
+                                <div class="info">
+                                    <p>Casa #</p>
+                                    <span>$2,000,000</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="opt-casa">
+                                <img src="img/casa9.jpg" alt="" srcset="">
+                                <div class="info">
+                                    <p>Casa #</p>
+                                    <span>$2,000,000</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
                 </div>
             </div>
         </div>
-
         <div class="DerechosResevados">
             <div class="lad-der">
                 <nav class="nav-footer">
