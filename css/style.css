@@ -551,9 +551,11 @@ footer {
 }
 /* ### DERECHOS RESEVADOS#### */
 .DerechosResevados {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
+  /* display: grid; */
+  /* grid-template-columns: 100%; */
+  /* grid-template-rows: repeat(2, 1fr); */
 }
 
 .lad-der {
@@ -562,11 +564,12 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  order: 2;
 }
 
 .lad-der small {
-  padding: 1rem;
-  font-size: 1rem;
+  padding: 0.9rem;
+  font-size: 0.8rem;
   font-weight: bold;
 }
 /* ## REDES SOCIALES  */
@@ -575,6 +578,8 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  order: 1;
+  padding-top: 1rem;
 }
 
 .sociales ul li span {
@@ -603,4 +608,20 @@ footer {
 }
 .sociales ul li a[href*="instagram.com"]::before {
   content: "\f16d";
+}
+
+@media screen and (min-width: 400px) {
+  .DerechosResevados {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .lad-der {
+    order: 0;
+  }
+  .redes-sociales {
+    order: 0;
+    padding: 0;
+  }
 }
